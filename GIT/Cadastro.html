@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="shortcut icon" href="imgs/favicon.ico" />
+
+    <title>Cadastro</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+ 
+	<!-- Seu código vai aqui! -->
+
+    
+  <body class="bg-success">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <img src="imgs/logo.png">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="Cadastro.html">Cadastro<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="Inicio.html">Inicio</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="carrinho.html">Carrinho</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="Pagamento.html">Pagamento</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Produtos
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="jogos.html">Jogos</a>
+                    <a class="dropdown-item" href="assinaturas.html">Assinaturas</a>
+                    <a class="dropdown-item" href="consoles.html">Consoles</a>
+                  </div>
+                </li>
+              </ul>
+              
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+              </form>
+            </div>
+        </nav>
+
+        <div class="container bg-light py-3 my-5" style="border-radius: 10px;">
+          <div class="py-5 text-center">
+            <h2>Cadastro do Cliente</h2>
+          </div>
+
+            <div class="col-12 order-md-1">
+              <h4 class="mb-3">Informações de Cobrança</h4>
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  
+                  <div class="col-md-6 mb-3">
+                    
+                    <label for="firstName">Nome</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-user"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    </div> 
+                    
+                    <div class="invalid-feedback">
+                      É necessário um nome válido.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Sobrenome</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      É necessário um sobrenome válido.
+                    </div>
+                  </div>
+                
+
+                  <div class="col-md-6 mb-3">
+                    <label for="DataNascimento">Data de Nascimento</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="fas fa-birthday-cake"></i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" id="DataNascimento" placeholder="DD/MM/AAAA" value="" required>
+                      </div>                   
+                    <div class="invalid-feedback">
+                      É necessário uma data de nascimento válida.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="telefone">Número de Telefone</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="fas fa-phone"></i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" id="telefone" placeholder="(xx) 1234-5678" value="" required>
+                      </div>                   
+                    <div class="invalid-feedback">
+                      É necessário uma data de nascimento válida.
+                    </div>
+                  </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="RG">RG</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="fas fa-id-card"></i>
+                          </span>
+                        </div>
+                      <input type="text" class="form-control" id="RG" placeholder="123.456.789-0" value="" required>
+                      </div>
+                      <div class="invalid-feedback">
+                        É necessário um RG válido.
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label for="CPF">CPF</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="fas fa-id-card"></i>
+                          </span>
+                        </div>
+                      <input type="text" class="form-control" id="CPF" placeholder="123.456.789-00" required>
+                      </div>
+                      <div class="invalid-feedback">
+                        É necessário um CPF válido.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row"> 
+                
+                <div class="col-md-6 mb-3">
+                  <label for="email">E-mail</label>
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          @
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="address" placeholder="Você@exemplo.com" required>
+                    </div>
+                  <div class="invalid-feedback">
+                    Por favor, insira um e-mail válido para notificações sobre a entrega.
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="email">Confirme seu E-mail</label>
+                  <input type="email" class="form-control" id="email" placeholder="">
+                  <div class="invalid-feedback">
+                    Os e-mails devem conferir
+                  </div>
+                </div>
+
+                </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="Senha">Senha</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-key"></i>
+                        </span>
+                      </div>
+                      <input type="password" class="form-control" id="Senha" placeholder="" required>
+                    </div>
+                      <small>No mínimo 8 caracteres</small>
+                      <div class="invalid-feedback">
+                        É necessário uma senha válida.
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label for="ConfirmSenha">Confirme sua senha</label>
+                      <input type="password" class="form-control" id="Senha" placeholder="" value="" required>
+                      <small>Deve ser igual à senha digitada anteriormente</small>
+                      <div class="invalid-feedback">
+                        As senhas devem conferir.
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="mb-3">
+                  <label for="address">Endereço</label>
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-home"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="address" placeholder="Rua Principal, 1234" required>
+                    </div>                  
+                  <div class="invalid-feedback">
+                    Por favor, insira seu endereço.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="address2">Complemento <span class="text-muted">(Opcional)</span></label>
+                  <input type="text" class="form-control" id="address2" placeholder="Apartamento ou Casa">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-5 mb-3">
+                    <label for="country">Cidade</label>
+                    <select class="custom-select d-block w-100" id="country" required>
+                      <option value="">Selecionar...</option>
+                      <option>Virgolândia</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecione uma cidade válida.
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="state">Estado</label>
+                    <select class="custom-select d-block w-100" id="state" required>
+                      <option value="">Selecionar...</option>
+                      <option>Minas Gerais</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecione um estado válido.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="zip">CEP</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      O CEP é obrigatório.
+                    </div>
+                  </div>
+                </div>
+                <hr class="mb-4">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="same-address">
+                  <label class="custom-control-label" for="same-address">O endereço de entrega é o mesmo que o endereço de cobrança.</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="save-info">
+                  <label class="custom-control-label" for="save-info">Memorizar informações para próxima compra.</label>
+                </div>
+
+                <hr class="mb-4">
+                <a href="login.html" class="btn btn-primary btn-lg btn-block" type="submit">Confirmar Cadastro</a>
+              </div>
+              </form>
+            </div>
+          </div>
+
+        <div class="container bg-light my-4 py-4" style="border-radius: 10px;">
+
+          <footer class=" text-muted text-center text-small">
+            <p class="mb-1">&copy; 2018-2019 Microsoft Xbox</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Endereço</a></li>
+              <li class="list-inline-item"><a href="#">Promoções</a></li>
+              <li class="list-inline-item"><a href="#">SAC 4002-8922</a></li>
+            </ul>
+          </footer>
+
+        </div>
+        
+        </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/vendor/jquery-slim.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>

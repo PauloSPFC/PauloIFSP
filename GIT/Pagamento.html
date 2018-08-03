@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="shortcut icon" href="imgs/favicon.ico" />
+
+    <title>Pagamento</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+ 
+  <!-- Seu código vai aqui! -->
+
+    
+  <body class="bg-success">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="imgs/logo.png">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="Pagamento.html">Pagamento<span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="inicio.html">Início</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+
+
+                <li class="nav-item">
+                  <a class="nav-link" href="carrinho.html">Carrinho</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Produtos
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="jogos.html">Jogos</a>
+                    <a class="dropdown-item" href="assinaturas.html">Assinaturas</a>
+                    <a class="dropdown-item" href="consoles.html">Consoles</a>
+                  </div>
+                </li>
+              </ul>
+              
+              <a class="btn mx-2 btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+              
+                <i class="fas fa-shopping-cart" style="color:white;"></i>
+
+              </a>
+              
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+              </form>
+            </div>
+        </nav>
+
+
+
+        <div class="container bg-light col-10 my-4" style="border-radius: 10px;">
+
+
+          <h4 class="mb-3 text-center">Opções de Pagamento</h4>
+
+                <div class="d-block my-3">
+                  <div class="custom-control custom-radio">
+                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                    <label class="custom-control-label" for="credit">Cartão de Crédito</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="debit">Cartão de Débito</label>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="cc-name">Nome no cartão</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted">Nome completo do titular</small>
+                    <div class="invalid-feedback">
+                      Nome no cartão é necessário.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="cc-number">Número do cartão de crédito</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Número do cartão de crédito é necessário.
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 mb-3">
+                    <label for="cc-expiration">Validade</label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Validade é necessária.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="cc-expiration">Código de segurança</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Código de segurança é necessário.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-control custom-radio">
+                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="paypal">Gerar Boleto</label>
+                </div>
+
+                <hr class="mb-4">
+
+                <div class="mb-3">
+                  <h4 class="text-center my-3">Endereço de Cobrança</h4>
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-home"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="address" placeholder="Rua Principal, 1234" required>
+                    </div>                  
+                  <div class="invalid-feedback">
+                    Por favor, insira seu endereço.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="address2">Complemento <span class="text-muted">(Opcional)</span></label>
+                  <input type="text" class="form-control" id="address2" placeholder="Apartamento ou Casa">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-5 mb-3">
+                    <label for="country">Cidade</label>
+                    <select class="custom-select d-block w-100" id="country" required>
+                      <option value="">Selecionar...</option>
+                      <option>Virgolândia</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecione uma cidade válida.
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="state">Estado</label>
+                    <select class="custom-select d-block w-100" id="state" required>
+                      <option value="">Selecionar...</option>
+                      <option>Minas Gerais</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecione um estado válido.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="zip">CEP</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      O CEP é obrigatório.
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="mb-4">
+
+                <div class="mb-3">
+                  <h4 class="text-center my-3">Endereço de Entrega</h4>
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fas fa-home"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="address" placeholder="Rua Principal, 1234" required>
+                    </div>                  
+                  <div class="invalid-feedback">
+                    Por favor, insira seu endereço.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="address2">Complemento <span class="text-muted">(Opcional)</span></label>
+                  <input type="text" class="form-control" id="address2" placeholder="Apartamento ou Casa">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-5 mb-3">
+                    <label for="country">Cidade</label>
+                    <select class="custom-select d-block w-100" id="country" required>
+                      <option value="">Selecionar...</option>
+                      <option>Virgolândia</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecione uma cidade válida.
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="state">Estado</label>
+                    <select class="custom-select d-block w-100" id="state" required>
+                      <option value="">Selecionar...</option>
+                      <option>Minas Gerais</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecione um estado válido.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="zip">CEP</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      O CEP é obrigatório.
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="mb-4">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="same-address">
+                  <label class="custom-control-label" for="same-address">O endereço de entrega é o mesmo que o endereço de cobrança.</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="save-info">
+                  <label class="custom-control-label" for="save-info">Memorizar informações para próxima compra.</label>
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block my-3" type="submit">Concluir Compra</button>
+
+
+          <footer class="text-muted text-center text-small">
+            <p class="mb-1">&copy; 2018-2019 Microsoft Xbox</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Endereço</a></li>
+              <li class="list-inline-item"><a href="#">Promoções</a></li>
+              <li class="list-inline-item"><a href="#">SAC 4002-8922</a></li>
+            </ul>
+          </footer>
+
+        </div>
+
+
+
+
+
+    <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3 modal-title">
+                          <span class="text-muted">Seu Carrinho</span>
+                          <span class="badge badge-secondary badge-pill mx-3">2</span>
+                        </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <div class="row ">
+            
+                      <div class="col-md-12 order-md-6 mb-12">
+                        
+                        <ul class="list-group mb-3">
+                          
+                          <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                              <h6 class="my-0">Forza Horizon 3</h6>
+                              <small class="text-muted">Pacote de Carros Lamborghini</small>
+                            </div>
+                            <span class="text-muted">R$50,00</span>
+                          </li>
+
+                          <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                              <h6 class="my-0">Fifa 18</h6>
+                              <small class="text-muted">Edição ICON + 2.000 Coins</small>
+                            </div>
+                            <span class="text-muted">R$80,00</span>
+                          </li>
+
+                          
+                          <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success">
+                              <h6 class="my-0">Código Promocional</h6>
+                              <small>JDGRT-HLK4A-JHUIT-3DPKL-ADFR6</small>
+                            </div>
+                            <span class="text-success">-R$20,00</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between">
+                            <span>Total (BRL)</span>
+                            <strong>R$110,00</strong>
+                          </li>
+                        </ul>
+
+                        <form class="card p-2">
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Código Promocional">
+                            <div class="input-group-append">
+                              <button type="submit" class="btn btn-success">Resgatar</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                  </div>
+                 
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+          
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/vendor/jquery-slim.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>
